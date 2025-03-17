@@ -1,0 +1,10 @@
+- To train prediction model, following the steps:
+    - ${\rm\color{blue}{S1\_generate\_spectrum.py}}$
+        - Generate ${\rm\mu_s}$ spectra from the A, K fitted factor from literatures.
+        - Generate ${\rm\mu_a}$ spectra in the range of literatures.
+    - ${\rm\color{blue}{absoprtion\_spectrum\_by\_substance/make\_spectrum.ipynb}}$
+        - Generate ${\rm\mu_a}$ spectra based on the chromophores such as water, blood, subcutaneous, collagen and melanin.
+        - copy the result files **skin_mua_spectrum.csv**, **fat_mua_spectrum.csv**, **muscle_mua_spectrum** and **cca_mua_spectrum.csv** to the directory **prediction_model/OPs_used/mua_chromophore**
+    - ${\rm\color{blue}{S2\_generate\_surrogate\_result.py}}$
+    - ${\rm\color{blue}{S3\_generate\_prediction\_input.py}}$
+    - ${\rm\color{blue}{S4\_train\_prediction\_model.py}}$

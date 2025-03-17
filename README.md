@@ -4,8 +4,9 @@ Internal-Jugular-Vein Project
 -   License: MIT License
 -   Update Date: 2023/12/13
 -   Download Size: 128 MB
--   Github Link: https://github.com/ShawnSun1031/IJV-Project
+-   Github Link: [https://github.com/ShawnSun1031/IJV-Project](https://github.com/ShawnSun1031/IJV-Project)
 -   Contact :email:: dicky10311111@gmail.com 
+-   IJV Web Site Link: [https://shawnsun1031.github.io/IJV-Project/](https://shawnsun1031.github.io/IJV-Project/)
 
 > [!NOTE] 
 > This is the description of the IJV project, which aims to ensure code behavior consistency. Please ensure that your environment aligns with the following specifications.
@@ -42,6 +43,7 @@ that simulation results closely resemble reality, thus providing more accurate s
 > Suggestion: create a ${\rm\color{red}{virtual \space environment}}$ and activate it.  
 > **How to creaete a virtual environment?**  
 > For **Anaconda** user, Read [**this document**](https://hackmd.io/@aMXX54b3ToSm3kTNB_LuWQ/BJ_No2Rkp)
+> From 2025, I highly recommand  you to use [uv](https://docs.astral.sh/uv/) to manage your python package
 
 > [!IMPORTANT]
 > 1. make sure your local computer has ${\rm\color{red}{cuda \space toolkit}}$

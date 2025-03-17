@@ -244,3 +244,4 @@ model_save/
 *.jdat
 *.jnii
 bin/
+.history/

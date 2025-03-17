@@ -1,0 +1,65 @@
+site_name: IJV-PROJECT
+repo_url: https://github.com/ShawnSun1031/IJV-Project
+repo_name: IJV-Project
+site_description: IJV-Project is a project for IJV course.
+site_author: Chin-Hsuan Sun
+copyright: Copyright © 2024 Chin-Hsuan Sun
+nav:
+  - Introduction: 'introduction.md'
+  - Handover: 
+    - Handover: 'handover/handover.md'
+    - SCS:
+      - Internal-Jugular-Vein Project (description): 'introduction.md'
+      - IJV Optical Properties: 'handover/IJV_optical_properties.md'
+      - Edit MCX Source Code: 'handover/eidt_mcx_source_code.md'
+      - Construct IJV Numerical Model: 'handover/ijv_numeric_model_constructed_by_ultrasound.md'
+      - MD703 Computer Setting Tutorial: 'handover/MD703_Computer_Setting_Tutorial.md'
+      - ImageJ Tutorial - Analyze Ultrasound Image: 'handover/ImageJ_tutorial.md'
+    - Eric:
+      - IJV Tissue Model Setting: 'handover/eric/IJV_tissue_model_setting.md'
+      - IJV Useful MCX User Group Threads: 'handover/eric/IJV_Useful_mcx-user_group_threads_MCX_code_tutorial.md'
+      - IJV Notebook: 'handover/eric/IJV_Notebook.md'
+      - IJV Holder Design and In-vivo Precautions : 'handover/eric/IJV_holder_design_in_vivo_precautions.md'
+      - IJV QEPro Installation: 'handover/eric/IJV_QEPro_installation.md'
+      - MD703 3D Printing and Tutorial : 'handover/eric/MD703_3D_printing_tutorial.md'
+  - MCX Simulation: 'MCX_simulation.md'
+  - Surrogate Model:
+    - Plot Surrogate Model Structure: 'surrogate_model/plot_surrogate_model_structure.ipynb'
+    - Plot Result: 'surrogate_model/plot_result.ipynb'
+  - Prediction Model:
+    - Instructions: 'prediction_model/instructions.md'
+    - Plot Nested K-fold Cross Validation: 'prediction_model/plot_nested_k_fold_cross_validation.ipynb'
+    - Plot Prediciton model Structure: 'prediction_model/plot_prediction_model_structure.ipynb'
+    - Plot Result: 'prediction_model/plot_result.ipynb'
+    - Plot Simulated Rmax Rmin: 'prediction_model/plot_simulated_Rmax_Rmin.ipynb'
+    - Plot Spectrum Noise: 'prediction_model/plot_spectrum_noise.ipynb'
+    - Plot Spectrum: 'prediction_model/plot_spectrum.ipynb'
+    - Plot Spectrum2: 'prediction_model/plot_spectrum2.ipynb'
+  - In-vivo Experiments: 
+    - Introduction: 'in_vivo_experiments/introduction.md'
+    - Preprocess Long Channel: 'in_vivo_experiments/S1_preprocess_long.ipynb'
+    - Preprocess Short Channel: 'in_vivo_experiments/S1_preprocess_short.ipynb'
+    - Process Data and Predict by ANN: 'in_vivo_experiments/S2_predict_measured_data.ipynb'
+  - Ultrasound Image Processing Parallel: 'ultrasound_image_processing_parallel.md'
+plugins:
+    - mkdocs-jupyter
+    - search
+theme:
+  name: material #[material|mkdocs|readthedocs]
+  highlightjs: true
+  analytics:
+    gtag: G-ABC123
+  hljs_languages:
+    - yaml
+    - rust
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
