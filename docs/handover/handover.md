@@ -19,7 +19,7 @@ Eric 交接文件
 SCS 交接文件
 ---
 
-- [Internal-Jugular-Vein Project (description)](/introduction/)
+- [Internal-Jugular-Vein Project (description)](/IJV-Project/introduction/)
 
 - [IJV Optical Properties](/IJV-Project/handover/IJV_optical_properties/)
 
