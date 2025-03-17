@@ -5,13 +5,13 @@ How to execute MCX_sim
 [![hackmd-github-sync-badge](https://hackmd.io/ygh1d2wOSeuPGTxB9IZHEQ/badge)](https://hackmd.io/ygh1d2wOSeuPGTxB9IZHEQ)
 
 ## Table of Contents
-- [Executing Experiments](/MCX_simulation/#executing-experiments)
-- [Beginners Guide](/MCX_simulation/#beginners-guide)
-- [Details for setting](/MCX_simulation/#details-for-setting)
-- [MCX forum](/MCX_simulation/#mcx-forum)
-- [MCX cloud](/MCX_simulation/#mcx-cloud)
-- [Analyze the output file from MCX](/MCX_simulation/#analyze-the-output-file-from-mcx)
-- [TODO](/MCX_simulation/#todo)
+- [Executing Experiments](/IJV-Project/MCX_simulation/#executing-experiments)
+- [Beginners Guide](/IJV-Project/MCX_simulation/#beginners-guide)
+- [Details for setting](/IJV-Project/MCX_simulation/#details-for-setting)
+- [MCX forum](/IJV-Project/MCX_simulation/#mcx-forum)
+- [MCX cloud](/IJV-Project/MCX_simulation/#mcx-cloud)
+- [Analyze the output file from MCX](/IJV-Project/MCX_simulation/#analyze-the-output-file-from-mcx)
+- [TODO](/IJV-Project/MCX_simulation/#todo)
 
 ## Executing Experiments
 

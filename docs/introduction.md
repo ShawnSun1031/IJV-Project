@@ -19,13 +19,13 @@ Internal-Jugular-Vein Project
 
 
 ## Table of Contents
-- [Introduction](/introduction/#introduction)
-- [Installation](/introduction/#installation)
-- [Project Flows](/introduction/#project-flows)
-    - [Simulation](/introduction/#simulation)
-    - [*In-vivo*](/introduction/#in-vivo)
-- [Desciprtion of Each Folder](/introduction/#desciprtion-of-each-folder)
-- [Reference](/introduction/#reference)
+- [Introduction](/IJV-Project/introduction/#introduction)
+- [Installation](/IJV-Project/introduction/#installation)
+- [Project Flows](/IJV-Project/introduction/#project-flows)
+    - [Simulation](/IJV-Project/introduction/#simulation)
+    - [*In-vivo*](/IJV-Project/introduction/#in-vivo)
+- [Desciprtion of Each Folder](/IJV-Project/introduction/#desciprtion-of-each-folder)
+- [Reference](/IJV-Project/introduction/#reference)
 
 ## Introduction
 > &nbsp;&nbsp;&nbsp;The primary objective of this study is to quantitatively measure changes in internal jugular vein oxygen saturation non-invasively using near-infrared spectroscopy. Initially, a surrogate model based on neural networks is employed to accelerate the Monte Carlo method which is traditionally used to simulate photon transport in tissue. Subsequently, another neural network is applied to establish a predictive model for oxygen saturation changes. The input to this model consists of spectral features extracted using formulas same as modified Beer-Lambert law, while the output represents oxygen saturation changes.  
