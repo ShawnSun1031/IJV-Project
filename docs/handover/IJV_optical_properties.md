@@ -5,42 +5,44 @@ tags: IJV
 ## 1. skin
 - 
 ## 2. subcutaneous adipose
-- 1. [**Optical Properties of skin, subcutaneous, and muscle tissues : a review**](https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing); Tabel 1
+- [**Optical Properties of skin, subcutaneous, and muscle tissues : a review**](https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing); Tabel 1
 
-| wavelength (nm) |$\mu_a$ (cm^-1^)| $\mu_s$' (cm^-1^) |
-|:------------:|:------:|:---------:|:-----:|
+| wavelength (nm) | $\mu_a$ (cm^-1^) | $\mu_s$' (cm^-1^) |
+| -------- | -------- | -------- |
 |  600  | 1.89  | 27.0 | 
 |  700  | 1.27  | 23.0 | 
-|  800  | 1.08  | 20.2 | 
-- 2. [**Optical properties of biological tissues: a review**](https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing)
+|  800  | 1.08  | 20.2 |
+
+- [**Optical properties of biological tissues: a review**](https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing)
 ## 3. muscle
-- 1. [**Optical Properties of skin, subcutaneous, and muscle tissues : a review**](https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing) ; Table 1
+- [**Optical Properties of skin, subcutaneous, and muscle tissues : a review**](https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing) ; Table 1
 
 | wavelength (nm) |$\mu_a$ (cm^-1^)| $\mu_s$ (cm^-1^) | g |
-|:------------:|:------:|:---------:|:-----:|:-----:|
+|:------------:|:------:|:---------:|:-----:|
 |  650  | 0.56  | 79.0  | 0.930|
 |  700  | 0.52  | 73.56 | 0.930|
 |  750  | 0.52  | 71.30 | 0.931|
 |  800  | 0.54  | 66.70 | 0.930|
-- 2. [**Optical properties of biological tissues: a review**](https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing)
+
+- [**Optical properties of biological tissues: a review**](https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing)
 
 
-- 3. [**Near-infrared optical properties of ex vivo human skin and subcutaneous tissues measured using the Monte Carlo inversion technique**](https://drive.google.com/file/d/1qPUqouiy_5zusgtDoixsRbboVCK_vOZx/view?usp=sharing)
+- [**Near-infrared optical properties of ex vivo human skin and subcutaneous tissues measured using the Monte Carlo inversion technique**](https://drive.google.com/file/d/1qPUqouiy_5zusgtDoixsRbboVCK_vOZx/view?usp=sharing)
 
 | wavelength (nm) |$\mu_a$ (mm^-1^)| $\mu_s$' (mm^-1^) |
-|:------------:|:------:|:---------:|:-----:|
+|:------------:|:------:|:---------:|
 |  633  | 0.121  | 0.89  |
 |  700  | 0.046  | 0.83  |
 |  900  | 0.032  | 0.59  |
 
 ## 4. whole blood
-- 1. [**Optical Properties of Whole Blood**](https://drive.google.com/file/d/1ZRKvN68OQrJO5rZZcFHOhSQ2HYnbHjpj/view?usp=sharing); Table 3 
+- [**Optical Properties of Whole Blood**](https://drive.google.com/file/d/1ZRKvN68OQrJO5rZZcFHOhSQ2HYnbHjpj/view?usp=sharing); Table 3 
 
 | wavelength (nm) |$\mu_a$ (cm^-1^)| $\mu_s$ (cm^-1^) |g|
 |:------------:|:------:|:---------:|:-----:|
 |  488  | 102.2  | 134.4   |0.91|
 
-- 2. [**Optical properties of blood in the near-infrared spectral range**](https://drive.google.com/file/d/1j8ljdcfXC34kSP_kxPODIUb9GKXdT-cG/view?usp=sharing); Fig 2
+- [**Optical properties of blood in the near-infrared spectral range**](https://drive.google.com/file/d/1j8ljdcfXC34kSP_kxPODIUb9GKXdT-cG/view?usp=sharing); Fig 2
 
 
 | wavelength (nm) |$\mu_a$ (mm^-1^)| $\mu_s$ (mm^-1^) | g |
@@ -54,8 +56,8 @@ tags: IJV
 |824.6| 0.729| 73.709| 0.991|
 ![](https://i.imgur.com/hxLAXfI.png)
 
-- 3. [**A literature review and novel theoretical approach on the optical properties of whole blood**](https://drive.google.com/file/d/17e-APg_Cv9uZTxGCzHznGKp7622Tj6QU/view?usp=sharing); Fig 1, Fig 2
-><font color=red>**SO~2~ = 0%**</font>
+- [**A literature review and novel theoretical approach on the optical properties of whole blood**](https://drive.google.com/file/d/17e-APg_Cv9uZTxGCzHznGKp7622Tj6QU/view?usp=sharing); Fig 1, Fig 2
+><font color=red>**SO2 = 0%**</font>
 
 | wavelength (nm) | $\mu_s$ (mm^-1^) |$\mu_s$'(mm^-1^)| g |
 |:------------:|:---------:|:-------:|:-------:|
@@ -79,10 +81,10 @@ tags: IJV
 
 
 
-><font color=red>**SO~2~ > 98%**</font>
+><font color=red>**SO2 > 98%**</font>
 
 | wavelength (nm) | $\mu_s$ (mm^-1^) |$\mu_s$'(mm^-1^)| g |
-|:------------:|:------:|:---------:|:-------:|:-------:| 
+|:------------:|:------:|:---------:|:-------:| 
 650|94.111|1.363|0.985|
 660|92.125|1.347|0.985|
 670|89.803|1.333|0.985|

@@ -2,7 +2,6 @@
 tags: Lab
 ---
 # IJV | 組織模型設定 July, 2021 - Revised
-[toc]
 
 ## 硬體設定
 ### i. 光源基本參數與模擬

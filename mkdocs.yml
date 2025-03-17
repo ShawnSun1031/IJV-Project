@@ -43,6 +43,7 @@ nav:
   - Ultrasound Image Processing Parallel: 'ultrasound_image_processing_parallel.md'
 plugins:
     - mkdocs-jupyter
+    - search
 theme:
   name: material #[material|mkdocs|readthedocs]
   highlightjs: true
@@ -51,3 +52,14 @@ theme:
   hljs_languages:
     - yaml
     - rust
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
