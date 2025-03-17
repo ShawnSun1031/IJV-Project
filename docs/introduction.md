@@ -42,7 +42,8 @@ that simulation results closely resemble reality, thus providing more accurate s
 > :notebook:  
 > Suggestion: create a ${\rm\color{red}{virtual \space environment}}$ and activate it.  
 > **How to creaete a virtual environment?**  
-> For **Anaconda** user, Read [this document](https://hackmd.io/@aMXX54b3ToSm3kTNB_LuWQ/BJ_No2Rkp)
+> For **Anaconda** user, Read [this document](https://hackmd.io/@aMXX54b3ToSm3kTNB_LuWQ/BJ_No2Rkp)  
+> From 2025, I highly recommand  you to use [uv](https://docs.astral.sh/uv/) to manage your python package  
 
 > :warning:  
 > 1. make sure your local computer has ${\rm\color{red}{cuda \space toolkit}}$  
