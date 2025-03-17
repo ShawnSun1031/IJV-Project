@@ -30,7 +30,7 @@ Based on the simulation results, the prediction model established in this study 
 >  &mdash; <cite>[Chin-Hsuan Sun][1]</cite>  
 
 ## Publication
-![Publication Image](/publications.png)  
+![Publication Image](/publication1.png)  
 Quantifying changes in oxygen saturation of the internal jugular vein in vivo using deep neural networks and subject-specific three-dimensional Monte Carlo models
 Published in Optics Letters Vol. 49, Issue 10, 2024
 
