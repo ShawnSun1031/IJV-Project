@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
       
 
@@ -47,7 +47,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -85,12 +85,12 @@
     <a href="../.." title="IJV-PROJECT" class="md-header__button md-logo" aria-label="IJV-PROJECT" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -110,16 +110,53 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
         <a href="https://github.com/ShawnSun1031/IJV-Project" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     IJV-Project
@@ -155,7 +192,7 @@
     <a href="../.." title="IJV-PROJECT" class="md-nav__button md-logo" aria-label="IJV-PROJECT" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     IJV-PROJECT
@@ -165,7 +202,7 @@
       <a href="https://github.com/ShawnSun1031/IJV-Project" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     IJV-Project
@@ -187,6 +224,7 @@
   
   <span class="md-ellipsis">
     Introduction
+    
   </span>
   
 
@@ -219,6 +257,7 @@
   
   <span class="md-ellipsis">
     Handover
+    
   </span>
   
 
@@ -244,6 +283,7 @@
   
   <span class="md-ellipsis">
     Handover
+    
   </span>
   
 
@@ -277,6 +317,7 @@
   
   <span class="md-ellipsis">
     SCS
+    
   </span>
   
 
@@ -302,6 +343,7 @@
   
   <span class="md-ellipsis">
     Introduction
+    
   </span>
   
 
@@ -332,6 +374,7 @@
   
   <span class="md-ellipsis">
     IJV Optical Properties
+    
   </span>
   
 
@@ -343,6 +386,7 @@
   
   <span class="md-ellipsis">
     IJV Optical Properties
+    
   </span>
   
 
@@ -420,6 +464,7 @@
   
   <span class="md-ellipsis">
     Edit MCX Source Code
+    
   </span>
   
 
@@ -441,6 +486,7 @@
   
   <span class="md-ellipsis">
     Construct IJV Numerical Model
+    
   </span>
   
 
@@ -462,6 +508,7 @@
   
   <span class="md-ellipsis">
     MD703 Computer Setting Tutorial
+    
   </span>
   
 
@@ -483,6 +530,7 @@
   
   <span class="md-ellipsis">
     ImageJ Tutorial - Analyze Ultrasound Image
+    
   </span>
   
 
@@ -522,6 +570,7 @@
   
   <span class="md-ellipsis">
     Eric
+    
   </span>
   
 
@@ -547,6 +596,7 @@
   
   <span class="md-ellipsis">
     IJV Tissue Model Setting
+    
   </span>
   
 
@@ -568,6 +618,7 @@
   
   <span class="md-ellipsis">
     IJV Useful MCX User Group Threads
+    
   </span>
   
 
@@ -589,6 +640,7 @@
   
   <span class="md-ellipsis">
     IJV Notebook
+    
   </span>
   
 
@@ -610,6 +662,7 @@
   
   <span class="md-ellipsis">
     IJV Holder Design and In-vivo Precautions
+    
   </span>
   
 
@@ -631,6 +684,7 @@
   
   <span class="md-ellipsis">
     IJV QEPro Installation
+    
   </span>
   
 
@@ -652,6 +706,7 @@
   
   <span class="md-ellipsis">
     MD703 3D Printing and Tutorial
+    
   </span>
   
 
@@ -688,6 +743,7 @@
   
   <span class="md-ellipsis">
     MCX Simulation
+    
   </span>
   
 
@@ -718,6 +774,7 @@
   
   <span class="md-ellipsis">
     Surrogate Model
+    
   </span>
   
 
@@ -743,6 +800,7 @@
   
   <span class="md-ellipsis">
     Plot Surrogate Model Structure
+    
   </span>
   
 
@@ -764,6 +822,7 @@
   
   <span class="md-ellipsis">
     Plot Result
+    
   </span>
   
 
@@ -802,6 +861,7 @@
   
   <span class="md-ellipsis">
     Prediction Model
+    
   </span>
   
 
@@ -827,6 +887,7 @@
   
   <span class="md-ellipsis">
     Instructions
+    
   </span>
   
 
@@ -848,6 +909,7 @@
   
   <span class="md-ellipsis">
     Plot Nested K-fold Cross Validation
+    
   </span>
   
 
@@ -869,6 +931,7 @@
   
   <span class="md-ellipsis">
     Plot Prediciton model Structure
+    
   </span>
   
 
@@ -890,6 +953,7 @@
   
   <span class="md-ellipsis">
     Plot Result
+    
   </span>
   
 
@@ -911,6 +975,7 @@
   
   <span class="md-ellipsis">
     Plot Simulated Rmax Rmin
+    
   </span>
   
 
@@ -932,6 +997,7 @@
   
   <span class="md-ellipsis">
     Plot Spectrum Noise
+    
   </span>
   
 
@@ -953,6 +1019,7 @@
   
   <span class="md-ellipsis">
     plot similarity
+    
   </span>
   
 
@@ -974,6 +1041,7 @@
   
   <span class="md-ellipsis">
     Plot Spectrum2
+    
   </span>
   
 
@@ -1012,6 +1080,7 @@
   
   <span class="md-ellipsis">
     In-vivo Experiments
+    
   </span>
   
 
@@ -1037,6 +1106,7 @@
   
   <span class="md-ellipsis">
     Introduction
+    
   </span>
   
 
@@ -1058,6 +1128,7 @@
   
   <span class="md-ellipsis">
     Preprocess Long Channel
+    
   </span>
   
 
@@ -1079,6 +1150,7 @@
   
   <span class="md-ellipsis">
     Preprocess Short Channel
+    
   </span>
   
 
@@ -1100,6 +1172,7 @@
   
   <span class="md-ellipsis">
     Process Data and Predict by ANN
+    
   </span>
   
 
@@ -1128,6 +1201,7 @@
   
   <span class="md-ellipsis">
     Ultrasound Image Processing Parallel
+    
   </span>
   
 
@@ -1212,6 +1286,7 @@
                 
                   
 
+
   
   
 
@@ -1223,59 +1298,121 @@
 </ul>
 <h2 id="2-subcutaneous-adipose">2. subcutaneous adipose</h2>
 <ul>
-<li>
-<ol>
 <li><a href="https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing"><strong>Optical Properties of skin, subcutaneous, and muscle tissues : a review</strong></a>; Tabel 1</li>
-</ol>
-</li>
 </ul>
-<p>| wavelength (nm) |$\mu_a$ (cm^-1^)| $\mu_s$' (cm^-1^) |
-|:------------:|:------:|:---------:|:-----:|
-|  600  | 1.89  | 27.0 | 
-|  700  | 1.27  | 23.0 | 
-|  800  | 1.08  | 20.2 | 
-- 2. <a href="https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing"><strong>Optical properties of biological tissues: a review</strong></a></p>
+<table>
+<thead>
+<tr>
+<th>wavelength (nm)</th>
+<th><span class="arithmatex">\(\mu_a\)</span> (cm^-1^)</th>
+<th><span class="arithmatex">\(\mu_s\)</span>' (cm^-1^)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>600</td>
+<td>1.89</td>
+<td>27.0</td>
+</tr>
+<tr>
+<td>700</td>
+<td>1.27</td>
+<td>23.0</td>
+</tr>
+<tr>
+<td>800</td>
+<td>1.08</td>
+<td>20.2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing"><strong>Optical properties of biological tissues: a review</strong></a></li>
+</ul>
 <h2 id="3-muscle">3. muscle</h2>
 <ul>
-<li>
-<ol>
 <li><a href="https://drive.google.com/file/d/1RJsSTNc8jRs-S6G_SrDUhdnZikkchb61/view?usp=sharing"><strong>Optical Properties of skin, subcutaneous, and muscle tissues : a review</strong></a> ; Table 1</li>
-</ol>
-</li>
 </ul>
-<p>| wavelength (nm) |$\mu_a$ (cm^-1^)| $\mu_s$ (cm^-1^) | g |
-|:------------:|:------:|:---------:|:-----:|:-----:|
-|  650  | 0.56  | 79.0  | 0.930|
-|  700  | 0.52  | 73.56 | 0.930|
-|  750  | 0.52  | 71.30 | 0.931|
-|  800  | 0.54  | 66.70 | 0.930|
-- 2. <a href="https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing"><strong>Optical properties of biological tissues: a review</strong></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">wavelength (nm)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_a\)</span> (cm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span> (cm^-1^)</th>
+<th style="text-align: center;">g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">650</td>
+<td style="text-align: center;">0.56</td>
+<td style="text-align: center;">79.0</td>
+<td style="text-align: center;">0.930</td>
+</tr>
+<tr>
+<td style="text-align: center;">700</td>
+<td style="text-align: center;">0.52</td>
+<td style="text-align: center;">73.56</td>
+<td style="text-align: center;">0.930</td>
+</tr>
+<tr>
+<td style="text-align: center;">750</td>
+<td style="text-align: center;">0.52</td>
+<td style="text-align: center;">71.30</td>
+<td style="text-align: center;">0.931</td>
+</tr>
+<tr>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;">0.54</td>
+<td style="text-align: center;">66.70</td>
+<td style="text-align: center;">0.930</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>
-<ol>
-<li><a href="https://drive.google.com/file/d/1qPUqouiy_5zusgtDoixsRbboVCK_vOZx/view?usp=sharing"><strong>Near-infrared optical properties of ex vivo human skin and subcutaneous tissues measured using the Monte Carlo inversion technique</strong></a></li>
-</ol>
+<p><a href="https://drive.google.com/file/d/1ftJfYxn0lRyAw6VCJnJdAO4qAwH1gOc5/view?usp=sharing"><strong>Optical properties of biological tissues: a review</strong></a></p>
 </li>
-</ul>
-<p>| wavelength (nm) |$\mu_a$ (mm^-1^)| $\mu_s$' (mm^-1^) |
-|:------------:|:------:|:---------:|:-----:|
-|  633  | 0.121  | 0.89  |
-|  700  | 0.046  | 0.83  |
-|  900  | 0.032  | 0.59  |</p>
-<h2 id="4-whole-blood">4. whole blood</h2>
-<ul>
 <li>
-<ol>
-<li><a href="https://drive.google.com/file/d/1ZRKvN68OQrJO5rZZcFHOhSQ2HYnbHjpj/view?usp=sharing"><strong>Optical Properties of Whole Blood</strong></a>; Table 3 </li>
-</ol>
+<p><a href="https://drive.google.com/file/d/1qPUqouiy_5zusgtDoixsRbboVCK_vOZx/view?usp=sharing"><strong>Near-infrared optical properties of ex vivo human skin and subcutaneous tissues measured using the Monte Carlo inversion technique</strong></a></p>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">wavelength (nm)</th>
-<th style="text-align: center;">$\mu_a$ (cm^-1^)</th>
-<th style="text-align: center;">$\mu_s$ (cm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_a\)</span> (mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span>' (mm^-1^)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">633</td>
+<td style="text-align: center;">0.121</td>
+<td style="text-align: center;">0.89</td>
+</tr>
+<tr>
+<td style="text-align: center;">700</td>
+<td style="text-align: center;">0.046</td>
+<td style="text-align: center;">0.83</td>
+</tr>
+<tr>
+<td style="text-align: center;">900</td>
+<td style="text-align: center;">0.032</td>
+<td style="text-align: center;">0.59</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-whole-blood">4. whole blood</h2>
+<ul>
+<li><a href="https://drive.google.com/file/d/1ZRKvN68OQrJO5rZZcFHOhSQ2HYnbHjpj/view?usp=sharing"><strong>Optical Properties of Whole Blood</strong></a>; Table 3 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">wavelength (nm)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_a\)</span> (cm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span> (cm^-1^)</th>
 <th style="text-align: center;">g</th>
 </tr>
 </thead>
@@ -1289,18 +1426,14 @@
 </tbody>
 </table>
 <ul>
-<li>
-<ol>
 <li><a href="https://drive.google.com/file/d/1j8ljdcfXC34kSP_kxPODIUb9GKXdT-cG/view?usp=sharing"><strong>Optical properties of blood in the near-infrared spectral range</strong></a>; Fig 2</li>
-</ol>
-</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">wavelength (nm)</th>
-<th style="text-align: center;">$\mu_a$ (mm^-1^)</th>
-<th style="text-align: center;">$\mu_s$ (mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_a\)</span> (mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span> (mm^-1^)</th>
 <th style="text-align: center;">g</th>
 </tr>
 </thead>
@@ -1356,21 +1489,17 @@
 </tbody>
 </table>
 <ul>
-<li>
-<ol>
 <li><a href="https://drive.google.com/file/d/17e-APg_Cv9uZTxGCzHznGKp7622Tj6QU/view?usp=sharing"><strong>A literature review and novel theoretical approach on the optical properties of whole blood</strong></a>; Fig 1, Fig 2<blockquote>
-<p><font color=red><strong>SO~2~ = 0%</strong></font></p>
+<p><font color=red><strong>SO2 = 0%</strong></font></p>
 </blockquote>
-</li>
-</ol>
 </li>
 </ul>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">wavelength (nm)</th>
-<th style="text-align: center;">$\mu_s$ (mm^-1^)</th>
-<th style="text-align: center;">$\mu_s$'(mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span> (mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span>'(mm^-1^)</th>
 <th style="text-align: center;">g</th>
 </tr>
 </thead>
@@ -1480,27 +1609,122 @@
 </tbody>
 </table>
 <blockquote>
-<p><font color=red><strong>SO~2~ &gt; 98%</strong></font></p>
+<p><font color=red><strong>SO2 &gt; 98%</strong></font></p>
 </blockquote>
-<p>| wavelength (nm) | $\mu_s$ (mm^-1^) |$\mu_s$'(mm^-1^)| g |
-|:------------:|:------:|:---------:|:-------:|:-------:| 
-650|94.111|1.363|0.985|
-660|92.125|1.347|0.985|
-670|89.803|1.333|0.985|
-680|87.433|1.318|0.984|
-690|85.871|1.307|0.984|
-700|83.911|1.295|0.984|
-710|82.766|1.307|0.984|
-720|81.606|1.319|0.984|
-730|80.270|1.318|0.983|
-740|78.520|1.302|0.983|
-750|76.786|1.296|0.983|
-760|75.055|1.285|0.983|
-770|73.318|1.277|0.982|
-780|72.399|1.276|0.982|
-790|71.652|1.293|0.981|
-800|70.482|1.303|0.981|
-810|69.338|1.296|0.981|</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">wavelength (nm)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span> (mm^-1^)</th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu_s\)</span>'(mm^-1^)</th>
+<th style="text-align: center;">g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">650</td>
+<td style="text-align: center;">94.111</td>
+<td style="text-align: center;">1.363</td>
+<td style="text-align: center;">0.985</td>
+</tr>
+<tr>
+<td style="text-align: center;">660</td>
+<td style="text-align: center;">92.125</td>
+<td style="text-align: center;">1.347</td>
+<td style="text-align: center;">0.985</td>
+</tr>
+<tr>
+<td style="text-align: center;">670</td>
+<td style="text-align: center;">89.803</td>
+<td style="text-align: center;">1.333</td>
+<td style="text-align: center;">0.985</td>
+</tr>
+<tr>
+<td style="text-align: center;">680</td>
+<td style="text-align: center;">87.433</td>
+<td style="text-align: center;">1.318</td>
+<td style="text-align: center;">0.984</td>
+</tr>
+<tr>
+<td style="text-align: center;">690</td>
+<td style="text-align: center;">85.871</td>
+<td style="text-align: center;">1.307</td>
+<td style="text-align: center;">0.984</td>
+</tr>
+<tr>
+<td style="text-align: center;">700</td>
+<td style="text-align: center;">83.911</td>
+<td style="text-align: center;">1.295</td>
+<td style="text-align: center;">0.984</td>
+</tr>
+<tr>
+<td style="text-align: center;">710</td>
+<td style="text-align: center;">82.766</td>
+<td style="text-align: center;">1.307</td>
+<td style="text-align: center;">0.984</td>
+</tr>
+<tr>
+<td style="text-align: center;">720</td>
+<td style="text-align: center;">81.606</td>
+<td style="text-align: center;">1.319</td>
+<td style="text-align: center;">0.984</td>
+</tr>
+<tr>
+<td style="text-align: center;">730</td>
+<td style="text-align: center;">80.270</td>
+<td style="text-align: center;">1.318</td>
+<td style="text-align: center;">0.983</td>
+</tr>
+<tr>
+<td style="text-align: center;">740</td>
+<td style="text-align: center;">78.520</td>
+<td style="text-align: center;">1.302</td>
+<td style="text-align: center;">0.983</td>
+</tr>
+<tr>
+<td style="text-align: center;">750</td>
+<td style="text-align: center;">76.786</td>
+<td style="text-align: center;">1.296</td>
+<td style="text-align: center;">0.983</td>
+</tr>
+<tr>
+<td style="text-align: center;">760</td>
+<td style="text-align: center;">75.055</td>
+<td style="text-align: center;">1.285</td>
+<td style="text-align: center;">0.983</td>
+</tr>
+<tr>
+<td style="text-align: center;">770</td>
+<td style="text-align: center;">73.318</td>
+<td style="text-align: center;">1.277</td>
+<td style="text-align: center;">0.982</td>
+</tr>
+<tr>
+<td style="text-align: center;">780</td>
+<td style="text-align: center;">72.399</td>
+<td style="text-align: center;">1.276</td>
+<td style="text-align: center;">0.982</td>
+</tr>
+<tr>
+<td style="text-align: center;">790</td>
+<td style="text-align: center;">71.652</td>
+<td style="text-align: center;">1.293</td>
+<td style="text-align: center;">0.981</td>
+</tr>
+<tr>
+<td style="text-align: center;">800</td>
+<td style="text-align: center;">70.482</td>
+<td style="text-align: center;">1.303</td>
+<td style="text-align: center;">0.981</td>
+</tr>
+<tr>
+<td style="text-align: center;">810</td>
+<td style="text-align: center;">69.338</td>
+<td style="text-align: center;">1.296</td>
+<td style="text-align: center;">0.981</td>
+</tr>
+</tbody>
+</table>
 <p><img alt="" src="https://i.imgur.com/7MaDuy3.png" />
 <img alt="" src="https://i.imgur.com/0DpAJyn.png" />
 <img alt="" src="https://i.imgur.com/EXoNQiV.png" /></p>
@@ -1557,10 +1781,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
