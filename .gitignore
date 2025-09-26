@@ -1,4 +1,6 @@
 public
+.vscode
+.history
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks,c++,1c,cuda
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,jupyternotebooks,c++,1c,cuda
