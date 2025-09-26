@@ -1,0 +1,4 @@
+[submodule "src/third_party/mcx_md703"]
+	path = src/third_party/mcx_md703
+	url = git@github.com:ShawnSun1031/mcx_source_code_angle_pattern.git
+	branch = add_angel_pattern
