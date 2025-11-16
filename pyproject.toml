@@ -1,12 +1,103 @@
 [project]
 name = "ijv-project"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "Non-invasive measurement of internal jugular vein oxygen saturation using near-infrared spectroscopy and Monte Carlo simulation"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Chin-Hsuan Sun", email = "dicky10311111@gmail.com"}
+]
+keywords = ["photon-transport", "monte-carlo", "near-infrared-spectroscopy", "biomedical-imaging"]
+
 dependencies = [
-    "mkdoc>=0.1",
-    "mkdocs-jupyter>=0.24.8",
-    "mkdocs>=1.6.1",
+    "numpy>=2.0.0",
+    "torch>=2.5.0",
+    "pmcx>=0.3.5",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "loguru>=0.7.0",
+    "opencv-python>=4.10.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.9.0",
+    "scipy>=1.14.0",
+    "jdata>=0.6.0",
+    "tqdm>=4.66.0",
+    "requests>=2.32.0",
+    "pyyaml>=6.0.2",
+    "click>=8.1.8",
+    "typer>=0.19.2",
+    "nptyping>=2.0.1",
+    "pip>=25.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.6.0",
+    "mypy>=1.11.0",
+    "ipython>=8.27.0",
+    "jupyter>=1.1.0",
+]
+
+docs = [
+    "mkdocs>=1.6.0",
+    "mkdocs-material>=9.5.0",
+    "mkdocs-jupyter>=0.25.0",
+    "pymdown-extensions>=10.9.0",
     "python-markdown-math>=0.8",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "UP",  # pyupgrade
+]
+
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191",  # indentation contains tabs
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+docstring-code-line-length = 20
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+check_untyped_defs = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "src/ijv_project/mcx_simulation/mcx_runner.py"]
+python_files = ["test_*.py"]
+addopts = "-s -v --cov=src --cov-report=term-missing --doctest-modules"

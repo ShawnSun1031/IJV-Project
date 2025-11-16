@@ -1,0 +1,115 @@
+# MCXLab Configuration Template
+# This file contains all available MCXLab parameters with example values
+# Based on the MCXLab Pydantic v2 Schema
+
+# ===== Required Fields =====
+# Total number of photons to simulate
+nphoton: 100000000
+
+# 3D volume data - can be:
+# - numpy array path (will be loaded)
+# - dimensions for auto-generation
+# - explicit array values
+vol:
+  type: "file_path"  # Options: "auto_generate", "file_path", "explicit"
+  # dimensions: [40, 40, 40]  # For auto_generate
+  file_path: "path/to/volume.npy"  # For file_path
+  # values: [[[1, 1], [1, 1]], [[1, 1], [1, 1]]]  # For explicit
+
+# Optical properties for each medium type
+# Index 0 is typically background/air (mua=0, mus=0)
+# prop:
+#   - mua: 0.0      # Absorption coefficient (1/mm)
+#     mus: 0.0      # Scattering coefficient (1/mm) 
+#     g: 1.0        # Anisotropy factor
+#     n: 1.0        # Refractive index
+#   - mua: 0.01     # Tissue example
+#     mus: 10.0
+#     g: 0.9
+#     n: 1.37
+
+# Time window settings
+tstart: 0.0       # Starting time of simulation (seconds)
+tstep: 5.0e-9     # Time-gate width (seconds)
+tend: 5.0e-9      # Ending time of simulation (seconds)
+
+# Source configuration
+# srcpos: [20.0, 20.0, 0.0]    # Source position [x,y,z] in grid units
+srcdir: [0.0, 0.0, 1.0]      # Source direction [vx,vy,vz]
+
+# ===== MC Simulation Settings =====
+seed: null                # Random number generator seed
+respin: 1                     # Number of simulation repetitions
+isreflect: 1                  # Consider refractive index mismatch (1) or matched (0)
+bc: aaaaar                    # Boundary conditions string (6-12 chars)
+isnormalized: 1               # Normalize output fluence to unitary source
+isspecular: 0                 # Calculate specular reflection if source is outside
+maxgate: null                 # Number of time-gates per simulation
+minenergy: 0.0                # Terminate photon when weight less than this level
+unitinmm: 1.0                 # Length unit for grid edge length # Voxel size for MCX simulation [mm/voxel]
+shapes: null                  # JSON string for additional shapes in grid
+invcdf: null                  # User-specified scattering phase function
+angleinvcdf:                  # User-specified launch angle distribution
+  file_path: "path/to/angleinvcdf.csv"  # For file_path
+gscatter: 1000000000          # Number of scattering events before ignoring anisotropy
+detphotons: null              # Detected photon data for replay mode
+polprop: null                 # Polarized optical properties
+
+# ===== GPU Settings =====
+autopilot: 1                  # Automatically set threads and blocks (1) or manual (0)
+# nblocksize: 64                # Number of CUDA thread blocks
+# nthread: 2048                 # Total CUDA thread number
+gpuid: 1                      # GPU index or binary string for multiple GPUs
+# workload: null                # Relative loads for each selected GPU
+isgpuinfo: 1                  # Print GPU info (1) or not (0)
+
+# ===== Source-Detector Parameters =====
+# Detector positions [x,y,z,radius]
+# detpos:
+#   - x: 30.0
+#     y: 20.0
+#     z: 0.0
+#     radius: 1.0
+#   - x: 10.0
+#     y: 20.0
+#     z: 0.0
+#     radius: 1.0
+
+maxdetphoton: 30000000         # Maximum number of photons saved by detectors
+srctype: "pencil"             # Source type
+srcparam1: null               # Source parameter 1 (source-type dependent)
+srcparam2: null               # Source parameter 2 (source-type dependent)
+srcpattern: null              # Source pattern array for pattern/pattern3d sources
+srcnum: 1                     # Number of source patterns for simultaneous simulation
+srcid: 0                      # Source ID selector for multi-source simulation
+omega: null                   # Source modulation frequency (rad/s) for RF replay
+srciquv: null                 # Stokes vector [I,Q,U,V] of incident light
+lambda: null                  # Source light wavelength (nm) for polarized MC
+issrcfrom0: 1                 # First voxel is [0,0,0] (1) or [1,1,1] (0)
+replaydet: null               # Detector index for replay mode
+voidtime: 1                   # Start timer at launch (1) or first non-zero voxel (0)
+
+# ===== Output Control =====
+savedetflag: "DSPXV"          # String controlling detected photon data fields
+issaveexit: false             # Save exit position and direction
+ismomentum: false             # Save photon momentum transfer
+issaveref: false              # Save diffuse reflectance/transmittance
+issave2pt: false              # Save volumetric output
+issavedet: null               # Save detected photon data control
+outputtype: "flux"            # Output type
+session: null                 # Session string for output file names
+
+# ===== Debug Parameters =====
+debuglevel: P                 # Debug flag string combination of R,M,P,T
+flog: 0                       # Log printing control
+istrajstokes: false           # Include Stokes IQUV vector in trajectory output
+maxjumpdebug: 10000000        # Maximum trajectory positions stored
+
+# ===== Additional Parameters =====
+isref3: null                  # 3D reflection handling
+isrefint: null                # Internal reflection handling
+sradius: null                 # Source radius parameter
+printnum: null                # Print control number
+faststep: null                # Enable fast stepping
+maxvoidstep: null             # Maximum void steps
+steps: null                   # Step size vector [x,y,z]

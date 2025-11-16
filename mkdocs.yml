@@ -1,9 +1,10 @@
-site_name: IJV-PROJECT
+site_name: IJV Project
+site_url: https://shawnsun1031.github.io/IJV-Project/
+site_description: Non-invasive measurement of internal jugular vein oxygen saturation using near-infrared spectroscopy
+site_author: Chin-Hsuan Sun
 repo_url: https://github.com/ShawnSun1031/IJV-Project
 repo_name: IJV-Project
-site_description: IJV-Project is a project for IJV course.
-site_author: Chin-Hsuan Sun
-copyright: Copyright © 2024 Chin-Hsuan Sun
+copyright: Copyright © 2025 Chin-Hsuan Sun
 nav:
   - Introduction: 'introduction.md'
   - Handover: 

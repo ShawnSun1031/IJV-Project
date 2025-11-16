@@ -1,0 +1,44 @@
+{
+    "skin": {
+        "f_blood_bound": [0.002, 0.04],
+        "SO2_bound": [0.65, 0.75],
+        "f_fat_bound": [0.000, 0.000],
+        "f_water_bound": [0.66, 0.78],
+        "f_mel_bound": [0.008, 0.02],
+        "f_col_bound": [0.1, 0.2]
+    },
+    "fat": {
+        "f_blood_bound": [0, 0.05],
+        "SO2_bound": [0.65, 0.75],
+        "f_fat_bound": [0.95, 1],
+        "f_water_bound": [0.08, 0.12],
+        "f_mel_bound": [0, 0],
+        "f_col_bound": [0, 0]
+    },
+    "muscle": {
+        "f_blood_bound": [0.0050, 0.01],
+        "SO2_bound": [0.65, 0.75],
+        "f_fat_bound": [0, 0],
+        "f_water_bound": [0.7, 1],
+        "f_mel_bound": [0, 0],
+        "f_col_bound": [0.1, 0.4]
+    },
+    "ijv": {
+        "f_blood_bound": [1, 1],
+        "SO2_bound": [0.4, 0.9],
+        "f_fat_bound": [0, 0],
+        "f_water_bound": [0, 0],
+        "f_mel_bound": [0, 0],
+        "f_col_bound": [0, 0]
+    },
+    "cca": {
+        "f_blood_bound": [1, 1],
+        "SO2_bound": [0.8, 1],
+        "f_fat_bound": [0, 0],
+        "f_water_bound": [0, 0],
+        "f_mel_bound": [0, 0],
+        "f_col_bound":[0, 0]
+    }
+
+        
+}

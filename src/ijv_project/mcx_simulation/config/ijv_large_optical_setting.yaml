@@ -1,0 +1,132 @@
+# Optical properties boundaries for different tissue types
+# All values are in units of [1/mm]
+
+dataset: # Dataset split ratios
+  train: 0.7
+  val: 0.2
+  test: 0.1
+
+tissues:
+  fiber:
+    media_id: 0  # Media ID in MCX simulation for optical fiber
+    mua:  # Absorption coefficient [1/mm]
+      min: 0
+      max: 0
+      generate_number: 1
+    mus:  # Scattering coefficient [1/mm]
+      min: 0
+      max: 0
+      generate_number: 1
+    g: 1            # Anisotropy factor
+    n: 1.457        # Refractive index
+    
+  air:
+    media_id: 1  # Media ID in MCX simulation for air
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.0
+      max: 0.0
+      generate_number: 1
+    mus:  # Scattering coefficient [1/mm]
+      min: 0.0
+      max: 0.0
+      generate_number: 1
+    g: 1      # Anisotropy factor
+    n: 1.0        # Refractive index
+
+  pla:
+    media_id: 2  # Media ID in MCX simulation for PLA material
+    mua:  # Absorption coefficient [1/mm]
+      min: 100.0
+      max: 100.0
+      generate_number: 1
+    mus:  # Scattering coefficient [1/mm]
+      min: 0.0
+      max: 0.0
+      generate_number: 1
+    g: 1      # Anisotropy factor
+    n: 1.45        # Refractive index
+
+  prism:
+    media_id: 3  # Media ID in MCX simulation for prism
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.0
+      max: 0.0
+      generate_number: 1
+    mus:  # Scattering coefficient [1/mm]
+      min: 0.0
+      max: 0.0
+      generate_number: 1
+    g: 1           # Anisotropy factor
+    n: 1.51        # Refractive index
+
+  skin:
+    media_id: 4  # Media ID in MCX simulation for skin
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.006
+      max: 0.258
+      generate_number: 3
+    mus:  # Scattering coefficient [1/mm]
+      min: 10.0
+      max: 28.0
+      generate_number: 3
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index
+      
+  fat:
+    media_id: 5  # Media ID in MCX simulation for fat
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.0079
+      max: 0.127
+      generate_number: 3
+    mus:  # Scattering coefficient [1/mm]
+      min: 10.0
+      max: 23.0
+      generate_number: 3
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index
+      
+  muscle:
+    media_id: 6  # Media ID in MCX simulation for muscle
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.0046
+      max: 0.054
+      generate_number: 3
+    mus:  # Scattering coefficient [1/mm]
+      min: 4.0
+      max: 9.0
+      generate_number: 3
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index
+
+  perturbed:
+    media_id: 7  # Media ID in MCX simulation for perturbed tissue
+    mua:  # Absorption coefficient [1/mm]
+      replaced_to: ijv
+    mus:  # Scattering coefficient [1/mm]
+      replaced_to: ijv 
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index
+      
+  ijv:  # Internal jugular vein
+    media_id: 8 # Media ID in MCX simulation for IJV
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.2146
+      max: 0.7409
+      generate_number: 3
+    mus:  # Scattering coefficient [1/mm]
+      min: 23.0
+      max: 52.0
+      generate_number: 3
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index
+      
+  cca:  # Common carotid artery
+    media_id: 9  # Media ID in MCX simulation for CCA
+    mua:  # Absorption coefficient [1/mm]
+      min: 0.1428
+      max: 0.744
+      generate_number: 3
+    mus:  # Scattering coefficient [1/mm]
+      replaced_to: ijv  # CCA mus is tied to IJV mus
+    g: 0.9        # Anisotropy factor
+    n: 1.4        # Refractive index

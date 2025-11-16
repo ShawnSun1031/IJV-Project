@@ -1,0 +1,19 @@
+{
+    "__comment__": "The mus upper bound and lower bound below are all in unit of [1/cm].",
+    "skin": [
+        108.0,
+        266.0
+    ],
+    "fat": [
+        104.0,
+        222.0
+    ],
+    "muscle": [
+        42.0,
+        79.0
+    ],
+    "blood": [
+        1197.0,
+        2561.0
+    ]
+}

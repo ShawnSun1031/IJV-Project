@@ -245,3 +245,10 @@ model_save/
 *.jnii
 bin/
 .history/
+
+*.vscode/
+mcx_output/
+logs/
+outputs/
+data
+.history

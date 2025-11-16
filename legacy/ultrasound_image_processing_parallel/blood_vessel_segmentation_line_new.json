@@ -1,0 +1,29 @@
+{
+	"HW":{
+		"20230903":{
+			"bound": [3, 650],
+			"length10mmEdge": [210, 445],
+			"skin":{
+				"__comment__": "axis-0 of imagee is x for line.",
+				"x": 35
+			},
+			"fat":{
+				"__comment__": "axis-0 of imagee is x for line.",
+				"x":70
+			},
+			"IJVLarge":{
+				"cca":{
+					"__comment__":"[x, y, radius]",
+					"v": [470, 500, 100]
+				}
+			},
+			"IJVSmall":{
+				"cca":{
+					"__comment__":"[x, y, radius]",
+					"v": [470, 500, 100]
+				}
+			}
+		}
+	}
+}
+

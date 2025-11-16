@@ -1,0 +1,39 @@
+# Volume and model parameters for MCX simulation
+# This file specifies easy-to-understand and user-manipulated settings about the parameters of MC model
+# All length units in this file are in [mm]
+
+# Hardware parameters for simulation setup
+hardware:
+  voxel_size: 0.25  # Voxel size for MCX simulation [mm/voxel]
+
+  source:     
+    holder:  # Source holder placed in the center of whole model and pasted onto tissue surface
+      x_size: 20.0      # [mm]
+      y_size: 20.0      # [mm]
+      z_size: 10.0       # [mm]
+      irradiation_window_radius: 1.5  # [mm]
+      
+    led:  # LED placed in the center of source holder
+      x_size: 1.8                           # [mm]
+      y_size: 2.55                          # [mm]
+      surface_to_window_distance: 6.0       # [mm] Distance from LED surface to irradiated window
+      sampling_num_radiation_pattern: 1e4 # Sampling number for radiation pattern
+      led_profile_in_3d_filename: led_source/LED_profile_in3D_pfForm_0to89.csv
+      angleinvcdf_filename: led_source/angleinvcdf.csv
+      
+  detector:
+    holder:  # Detector holder placed right next to the source holder
+      x_size: 20.0  # [mm]
+      y_size: 25.0  # [mm]
+      z_size: 6.0   # [mm]
+      
+    prism:  # Prism placed in the middle of detector holder and on the skin surface
+      x_size: 20.0  # [mm]
+      y_size: 5.0   # [mm]
+      z_size: 5.0   # [mm]
+      
+    fibers:  # Optical fibers configuration
+      - sds: 10.0      # [mm] Source-detector separation
+        radius: 0.3675 # [mm] Fiber radius
+      - sds: 20.0      # [mm] Source-detector separation
+        radius: 0.3675 # [mm] Fiber radius
