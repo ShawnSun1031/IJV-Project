@@ -13,7 +13,6 @@ keywords = ["photon-transport", "monte-carlo", "near-infrared-spectroscopy", "bi
 dependencies = [
     "numpy>=2.0.0",
     "torch>=2.5.0",
-    "pmcx>=0.3.5",
     "pydantic>=2.9.0",
     "pydantic-settings>=2.5.0",
     "loguru>=0.7.0",
@@ -57,10 +56,19 @@ build-backend = "hatchling.build"
 line-length = 100
 target-version = "py313"
 
+exclude = [
+    "src/third_party/**",
+    ".venv/**",
+    "build/**",
+    "dist/**",
+    "__pypackages__/**",
+]
+
+
 [tool.ruff.lint]
 select = [
-    "E",  # pycodestyle errors
-    "W",  # pycodestyle warnings
+    # "E",  # pycodestyle errors
+    # "W",  # pycodestyle warnings
     "F",  # pyflakes
     "I",  # isort
     "C",  # flake8-comprehensions

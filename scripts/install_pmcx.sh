@@ -6,6 +6,6 @@ echo "Building pmcx wheel..."
 echo "-----------------------------------"
 
 cd src/third_party/mcx_fanq/pmcx
-python3 -m pip wheel .
-uv pip install --force-reinstall --no-deps pmcx-*.whl
-rm -r build pmcx.egg-info pmcx-*.whl
+git reset fbe3de0 --hard
+uv pip install . --force-reinstall --no-deps
+rm -r build pmcx.egg-info
