@@ -1,0 +1,3 @@
+[submodule "src/third_party/mcx_fanq"]
+	path = src/third_party/mcx_fanq
+	url = https://github.com/fangq/mcx.git

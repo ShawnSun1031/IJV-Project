@@ -252,3 +252,4 @@ logs/
 outputs/
 data
 .history
+src/third_party/mcx_fanq
