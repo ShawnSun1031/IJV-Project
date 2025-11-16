@@ -8,4 +8,4 @@ echo "-----------------------------------"
 cd src/third_party/mcx_fanq/pmcx
 python3 -m pip wheel .
 uv pip install --force-reinstall --no-deps pmcx-*.whl
-# git reset --hard HEAD
+rm -r build pmcx.egg-info pmcx-*.whl
