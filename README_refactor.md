@@ -24,3 +24,16 @@ To run the MCX simulation, execute the following command:
 ```
 PYTHONPATH=src python src/ijv_project/mcx_simulation/main.py
 ```
+
+# TODO
+1. refactor mcx:  
+    a. na for mcx runner  
+    b. wmc (cupy implementation)  
+    c. ultrasound image processing --> vol  
+    d. optical parameter fitting from paper  
+2. refactor surrogate modal
+3. refactor prediction modal
+4. refactor in-vivo exp
+5. update readme
+6. update docs
+7. github ci/cd pipeline build up
