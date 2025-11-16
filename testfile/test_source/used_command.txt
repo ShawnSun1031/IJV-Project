@@ -1,1 +1,0 @@
-mcx.exe --session test --input input_test.json --root mcx_output --gpu 1 --autopilot 1 --photon 10000000.0 --repeat 1 --normalize 1 --bc aaaaar --unitinmm 1 --skipradius -2 --array 0 --dumpmask 0 --maxdetphoton 30000000.0 --srcfrom0 1 --saveseed 1 --debug P --savedetflag DSPXV --seed -1 --outputformat jnii

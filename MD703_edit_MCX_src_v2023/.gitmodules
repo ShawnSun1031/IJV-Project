@@ -1,6 +1,0 @@
-[submodule "filter"]
-	path = filter
-	url = https://github.com/fangq/GPU-ANLM.git
-[submodule "src/pybind11"]
-	path = src/pybind11
-	url = https://github.com/pybind/pybind11.git
