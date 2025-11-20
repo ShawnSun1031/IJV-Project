@@ -27,7 +27,7 @@ PYTHONPATH=src python src/ijv_project/mcx_simulation/main.py
 
 # TODO
 1. refactor mcx:  
-    a. na for mcx runner  
+    a. na for mcx runner [done]
     b. wmc (cupy implementation)  
     c. ultrasound image processing --> vol  
     d. optical parameter fitting from paper  

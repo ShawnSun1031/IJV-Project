@@ -47,6 +47,14 @@ class DetectPhoton(TypedDict):
 	data: np.ndarray | None
 
 
+class NaFilterMap(TypedDict):
+	"""Numerical aperture filter mapping structure."""
+
+	na: float
+	refraction_index_0: float
+	refraction_index_1: float
+
+
 @dataclass
 class DetectPhotonResults:
 	"""Results from detected photon data analysis."""
@@ -400,6 +408,7 @@ class MCXRunner:
 		self,
 		config: MCXConfig,
 		sds_detid_map: dict[str, list[int]] | None = None,
+		na: NaFilterMap | None = None,
 		save_dir: Path = Path('./mcx_output'),
 	) -> None:
 		"""Initialize MCX runner.
@@ -411,6 +420,7 @@ class MCXRunner:
 		self.config = config
 		self.cfg_dict = config.to_pmcx_dict()
 		self.sds_detid_map = sds_detid_map
+		self.na = na
 		self.save_dir = save_dir
 		self.output = {
 			'simulation_result': 'simulation_result.pkl',
@@ -420,6 +430,64 @@ class MCXRunner:
 		logger.info(
 			f'Initialized MCXRunner with {config.nphoton} photons, volume shape {config.vol.shape}'
 		)
+
+	def _na_filtering(self, result: SimulationResult) -> SimulationResult:
+		"""Apply numerical aperture (NA) filtering to detected photons.
+
+		Args:
+		    result: SimulationResult object.
+
+		Returns:
+		    Filtered SimulationResult object.
+		"""
+		if self.na is None:
+			return result
+
+		# Implement NA filtering logic here
+		detp = result.det_photon
+		if detp is None or detp['v'] is None:
+			raise ValueError('No detected photon data for NA filtering.')
+
+		cz = detp['v'][:, 2]  # z-component of direction
+		after_refraction_theta_z = np.arccos(cz)
+		na_angle = np.arcsin(self.na['na'] / self.na['refraction_index_1'])
+		before_refraction_theta_z = np.arcsin(
+			np.sin(after_refraction_theta_z)
+			* self.na['refraction_index_0']
+			/ self.na['refraction_index_1']
+		)
+		valid_indices = np.where(before_refraction_theta_z <= na_angle)[0]
+
+		# Filter detected photons
+		filtered_detp: DetectPhoton = {
+			'detid': detp['detid'][valid_indices],
+			'srcid': detp.get('srcid'),
+			'nscat': detp['nscat'][valid_indices]
+			if 'nscat' in detp and detp['nscat'] is not None
+			else None,
+			'ppath': detp['ppath'][valid_indices]
+			if 'ppath' in detp and detp['ppath'] is not None
+			else None,
+			'mom': detp['mom'][valid_indices]
+			if 'mom' in detp and detp['mom'] is not None
+			else None,
+			'p': detp['p'][valid_indices] if 'p' in detp and detp['p'] is not None else None,
+			'v': detp['v'][valid_indices] if 'v' in detp and detp['v'] is not None else None,
+			'w0': detp['w0'][valid_indices] if 'w0' in detp and detp['w0'] is not None else None,
+			's': detp['s'][valid_indices] if 's' in detp and detp['s'] is not None else None,
+			'prop': detp.get('prop'),
+			'data': detp['data'][:, valid_indices]
+			if 'data' in detp and detp['data'] is not None
+			else None,
+			'unitinmm': detp.get('unitinmm'),
+		}
+		result.det_photon = filtered_detp
+
+		# This is a placeholder implementation
+		logger.info(f'Applying NA filtering with NA={self.na}')
+		# Actual filtering code would go here
+
+		return result
 
 	def _single_run(self) -> SimulationResult:
 		"""Run Monte Carlo simulation.
@@ -442,7 +510,7 @@ class MCXRunner:
 				)
 
 			result = self._parse_output(output)
-
+			result = self._na_filtering(result)
 			logger.success(
 				f'Simulation completed successfully in {result.runtime:.2f}s. '
 				f'Simulated {result.nphoton} photons.'
