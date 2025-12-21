@@ -19,8 +19,8 @@ from ijv_project import logger
 from ijv_project.utils.mcx2preview import mcx2preview_json
 
 try:
-	import pmcx
-	from pmcx.utils import detweight, meanpath, meanscat  # noqa: F401
+	import pmcx  # type: ignore[import-untyped]
+	from pmcx.utils import detweight, meanpath, meanscat  # type: ignore[import-untyped]
 
 	from ijv_project.utils.ijv_pmcx import cwdref
 except ImportError:
@@ -146,7 +146,7 @@ class SimulationResult:
 			'cwd_ref_sds': output_dir / 'cwd_ref_sds.csv',
 		}
 
-		save_dict = {
+		save_dict: dict[str, Any] = {
 			'flux': self.flux,
 			'runtime': self.runtime,
 			'nphoton': self.nphoton,
@@ -189,7 +189,7 @@ class SimulationResult:
 		    Loaded SimulationResult object.
 		"""
 		with open(input_path, 'rb') as f:
-			data = pickle.load(f)
+			data: SimulationResult = pickle.load(f)
 
 		return data
 
@@ -218,8 +218,8 @@ class SimulationResult:
 			temp_dict: dict[str, Any] = {}
 			for key in self.det_photon.keys():
 				if key in other.det_photon:
-					self_val = self.det_photon[key]
-					other_val = other.det_photon[key]
+					self_val = self.det_photon[key] # type: ignore[literal-required]
+					other_val = other.det_photon[key] # type: ignore[literal-required]
 					if self_val is not None and other_val is not None:
 						if key == 'unitinmm':
 							if self_val != other_val:
@@ -235,16 +235,16 @@ class SimulationResult:
 					else:
 						temp_dict[key] = self_val if self_val is not None else other_val
 				else:
-					temp_dict[key] = self.det_photon[key]
+					temp_dict[key] = self.det_photon[key] # type: ignore[literal-required]
 			for key in other.det_photon.keys():
 				if key not in temp_dict:
-					temp_dict[key] = other.det_photon[key]
+					temp_dict[key] = other.det_photon[key] # type: ignore[literal-required]
 			# Cast to DetectPhoton TypedDict
-			combined_det_photon = temp_dict  # type: ignore[assignment]
+			combined_det_photon = temp_dict.copy() # type: ignore[assignment]
 		elif self.det_photon is not None:
-			combined_det_photon = self.det_photon.copy()  # type: ignore[assignment]
+			combined_det_photon = self.det_photon.copy()
 		elif other.det_photon is not None:
-			combined_det_photon = other.det_photon.copy()  # type: ignore[assignment]
+			combined_det_photon = other.det_photon.copy()
 
 		return SimulationResult(
 			flux=combined_flux,
@@ -280,7 +280,7 @@ class SimulationResult:
 		for sds, detids in sds_detid_map.items():
 			detid_strs = [str(detid) for detid in detids]
 			cwd_ref_values = cwd_ref_detector.loc[detid_strs, 'cwd_ref'].values
-			cwd_ref_mean = np.mean(cwd_ref_values)  # type: ignore
+			cwd_ref_mean = np.mean(cwd_ref_values) # type: ignore[arg-type]
 			sds_list.append({'sds': sds, 'cwd_ref': cwd_ref_mean})
 
 		return pd.DataFrame(sds_list)
@@ -440,7 +440,7 @@ class MCXRunner:
 		Returns:
 		    Filtered SimulationResult object.
 		"""
-		if self.na is None:
+		if self.na is None	:
 			return result
 
 		# Implement NA filtering logic here
@@ -510,7 +510,8 @@ class MCXRunner:
 				)
 
 			result = self._parse_output(output)
-			result = self._na_filtering(result)
+			if self.na is not None:
+				result = self._na_filtering(result)
 			logger.success(
 				f'Simulation completed successfully in {result.runtime:.2f}s. '
 				f'Simulated {result.nphoton} photons.'
@@ -549,8 +550,8 @@ class MCXRunner:
 				runtime = stat.get('runtime', 0.0)
 				nphoton = stat.get('nphoton', nphoton)
 
-		if 'detp' in output:  # type: ignore[no-untyped-call]
-			detp = DetectPhoton(**output['detp'])
+		if 'detp' in output:
+			detp = DetectPhoton(**output['detp']) # type: ignore[typeddict-item]
 
 			if detp.get('detid') is None:
 				raise ValueError(
@@ -593,11 +594,11 @@ class MCXRunner:
 			cwd_ref_predicted_cv['cwd_ref_cv_percent'] = cwd_ref_cv['cwd_ref'] / np.sqrt(
 				len(cwd_ref_data)
 			)
-			cwd_ref_predicted_cv.columns = [
+			cwd_ref_predicted_cv.columns = pd.Index([
 				key,
 				'cwd_ref_cv_percent',
 				'cwd_ref_predicted_cv_percent',
-			]
+			])
 
 			# pd.set_option(
 			#     "display.float_format",

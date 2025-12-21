@@ -15,7 +15,7 @@ from ijv_project.mcx_simulation import (
     IJV_SMALL_OPTICAL_SETTING_FILE,
     ULTRASOUND_VOLUME_DIRNAME,
 )
-from ijv_project.mcx_simulation.mcx_runner import MCXRunner
+from ijv_project.mcx_simulation.mcx_runner import MCXRunner, NaFilterMap
 from ijv_project.mcx_simulation.schema.mcxlab import MCXConfig
 from ijv_project.mcx_simulation.simulation_builder import SimulationBuilder
 
@@ -39,7 +39,11 @@ class DefaultSettings:
     ultrasound_volume_file: Path = ULTRASOUND_VOLUME_DIRNAME / "HW_20230903_merge_vol.npy"
     mcx_run_start: int = 1
     mcx_run_end: int = 10
-    na: float | None = 0.37
+    na: NaFilterMap | None = NaFilterMap(
+        na=0.37,
+        refraction_index_0=1.33,
+        refraction_index_1=1.33,
+    )
     n_iterations: int = 3
     cv_threshold: float | None = 2.5
 
@@ -61,7 +65,7 @@ def main(
     mcx_run_end: Annotated[
         int, typer.Option(help="Ending run index")
     ] = DefaultSettings.mcx_run_end,
-    na: Annotated[float | None, typer.Option(help="Numerical Aperture value")] = DefaultSettings.na,
+    na: Annotated[NaFilterMap | None, typer.Option(help="Numerical Aperture value")] = DefaultSettings.na,
     n_iterations: Annotated[
         int,
         typer.Option(
@@ -126,7 +130,7 @@ def main(
         sds_detid_map = json.load(
             open(sim_builder.unique_output_dir / "metadata" / IJV_SDS_DETID_MAP_FILE)
         )
-        runner = MCXRunner(config, sds_detid_map, save_dir=sim_dir)
+        runner = MCXRunner(config, sds_detid_map, na=na, save_dir=sim_dir)
         runner.run(
             n_iterations=n_iterations,
             cv_threshold=cv_threshold,
